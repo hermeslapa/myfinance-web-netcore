@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\herme\\.nuget\\packages\\": {}
+    "/home/hermeslapa/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\herme\\Documents\\git\\myfinance-web-netcore\\myfinance-web-netcore.csproj",
+      "projectUniqueName": "/home/hermeslapa/Documentos/git/myfinance-web-netcore/myfinance-web-netcore.csproj",
       "projectName": "myfinance-web-netcore",
-      "projectPath": "C:\\Users\\herme\\Documents\\git\\myfinance-web-netcore\\myfinance-web-netcore.csproj",
-      "packagesPath": "C:\\Users\\herme\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\herme\\Documents\\git\\myfinance-web-netcore\\obj\\",
+      "projectPath": "/home/hermeslapa/Documentos/git/myfinance-web-netcore/myfinance-web-netcore.csproj",
+      "packagesPath": "/home/hermeslapa/.nuget/packages/",
+      "outputPath": "/home/hermeslapa/Documentos/git/myfinance-web-netcore/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\herme\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/hermeslapa/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -49,7 +49,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -61,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/hermeslapa/.dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }
