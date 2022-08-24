@@ -24,3 +24,10 @@
 /home/hermeslapa/Documentos/git/myfinance-web-netcore/obj/Debug/net6.0/myfinance-web-netcore.pdb
 /home/hermeslapa/Documentos/git/myfinance-web-netcore/obj/Debug/net6.0/myfinance-web-netcore.genruntimeconfig.cache
 /home/hermeslapa/Documentos/git/myfinance-web-netcore/obj/Debug/net6.0/ref/myfinance-web-netcore.dll
+/home/hermeslapa/Documentos/git/myfinance-web-netcore/bin/Debug/net6.0/System.Data.SqlClient.dll
+/home/hermeslapa/Documentos/git/myfinance-web-netcore/bin/Debug/net6.0/runtimes/win-arm64/native/sni.dll
+/home/hermeslapa/Documentos/git/myfinance-web-netcore/bin/Debug/net6.0/runtimes/win-x64/native/sni.dll
+/home/hermeslapa/Documentos/git/myfinance-web-netcore/bin/Debug/net6.0/runtimes/win-x86/native/sni.dll
+/home/hermeslapa/Documentos/git/myfinance-web-netcore/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/hermeslapa/Documentos/git/myfinance-web-netcore/bin/Debug/net6.0/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/hermeslapa/Documentos/git/myfinance-web-netcore/obj/Debug/net6.0/myfinance-web-netcore.csproj.CopyComplete
