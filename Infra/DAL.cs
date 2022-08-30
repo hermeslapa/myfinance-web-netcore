@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Data;
 namespace myfinance_web_netcore.Infra
 {
@@ -10,7 +6,7 @@ namespace myfinance_web_netcore.Infra
         private SqlConnection conn;
         private string connectionString;
         public static IConfiguration? Configuration;
-        private static DAL Instancia;
+        private static DAL? Instancia;
         
         public static DAL GetInstancia{
             get{
@@ -29,13 +25,25 @@ namespace myfinance_web_netcore.Infra
             conn.ConnectionString = connectionString;
             conn.Open();
         }
-        
+
+        public void Desconectar()
+        {
+            conn.Close();
+        }
+
         public DataTable RetornaDataTable(string sql) 
         {
             var dataTable= new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql,conn);
             da.Fill(dataTable);
             return dataTable;
+        }
+
+        //INSERT,UPDATE,DELETE
+        public void ExecutarComandoSQL(string sql)
+        {
+            SqlCommand command = new SqlCommand(sql,conn);
+            command.ExecuteNonQuery();
         }
     }
 }

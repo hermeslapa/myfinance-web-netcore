@@ -33,8 +33,6 @@ void CriaInstanciaDAL(WebApplication app)
 {
     IConfiguration configuration = app.Configuration;
     DAL.Configuration = configuration;
-    var objDAL = DAL.GetInstancia;
-    objDAL.Conectar();
-    var teste = objDAL.RetornaDataTable("select * from plano_contas");
-    Console.WriteLine(teste.Rows.Count.ToString());
+    //var objDAL = DAL.GetInstancia;
+    //objDAL.Conectar();    
 }
