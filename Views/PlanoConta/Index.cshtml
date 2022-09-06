@@ -1,43 +1,46 @@
 ﻿@{
     ViewData["Title"] = "Plano Contas";
 }
-<h3> Plano de Contas</h3>
+
+<h3>Plano de Contas <button type="button" class="btn btn-block btn-primary float-end" onclick="CriarPlanoConta()">Criar
+        Plano de Contas</button></h3>
 <hr>
 
-<button type="button" class="btn-block btn-primary" onclick="CriarPlanoConta()"> Criar Criar Plano de Contas</button>
-
-<table class='table table-bordered'>
-  <tr>
-    <th>Editar</th>
-    <th>Excluir</th>
-    <th>Id</th>
-    <th>Descricao</th>
-    <th>Tipo</th>
-  </tr>
-  @{
-    foreach(var item in (List<PlanoContaModel>)ViewBag.Lista)
-    {
+<table class='table table-striped table-hover table-sm'>
     <tr>
-        <td><button type="button" class="btn-block btn-warning" onclick="EditarPlanoConta(@item.Id.ToString())">Editar</button></td>
-        <td><button type="button" class="btn-block btn-danger" onclick="ExcluirPlanoConta(@item.Id.ToString())">Excluir</button></td>
-        <td>@item.Id </td>
-        <td>@item.Descricao</td>
-        <td>@item.Tipo</td>
+        <th>Id</th>
+        <th>Descrição</th>
+        <th>Tipo</th>
+        <th></th>
     </tr>
+
+    @{
+        foreach (var item in (List<PlanoContaModel>)ViewBag.list)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Descricao</td>
+                <td>@item.Tipo</td>
+                <td>
+                    <div class="btn-group btn-group-sm float-end" role="group">
+                        <button class='btn btn-secondary text-capitalize' onclick="EditarPlanoConta(@item.Id)">editar</button>
+                        <button class='btn btn-danger text-capitalize' onclick="ExcluirPlanoConta(@item.Id)">deletar</button>
+                    </div>
+                </td>
+            </tr>
+        }
     }
-  }
+
 </table>
 
 <script>
-    function CriarPlanoConta(){
+    function CriarPlanoConta() {
         window.location.href = "../PlanoConta/CriarPlanoConta";
     }
-
-    function EditarPlanoConta(id){
+    function EditarPlanoConta(id) {
         window.location.href = "../PlanoConta/CriarPlanoConta/" + id;
     }
-
-    function ExcluirPlanoConta(id){
+    function ExcluirPlanoConta(id) {
         window.location.href = "../PlanoConta/ExcluirPlanoConta/" + id;
     }
 </script>

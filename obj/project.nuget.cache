@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fJOxgx04K2x9T0NdQ1Es4xOiXV5HY1L7dcFtMHlrJ4lvzY/HzcwtyuUnLLzjarHv0BC8XQoqViJyGhamSl+AlA==",
+  "dgSpecHash": "ErjeEd3TIU4CC9c2VtyBwNUqtHkxT88JSXGMFxDG8G9baBu38cPTmu8eVuhmcBcCPdipWGpxmxyV9JlOUJpVDw==",
   "success": true,
-  "projectFilePath": "/home/hermeslapa/Documentos/git/myfinance-web-netcore/myfinance-web-netcore.csproj",
+  "projectFilePath": "/home/hermeslapa/Documentos/git/bernardo-dotnet/my-finance-web-netcore/myfinance-web-netcore/myfinance-web-netcore.csproj",
   "expectedPackageFiles": [
     "/home/hermeslapa/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/home/hermeslapa/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",

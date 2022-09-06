@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/hermeslapa/Documentos/git/myfinance-web-netcore/myfinance-web-netcore.csproj": {}
+    "/home/hermeslapa/Documentos/git/bernardo-dotnet/my-finance-web-netcore/myfinance-web-netcore/myfinance-web-netcore.csproj": {}
   },
   "projects": {
-    "/home/hermeslapa/Documentos/git/myfinance-web-netcore/myfinance-web-netcore.csproj": {
+    "/home/hermeslapa/Documentos/git/bernardo-dotnet/my-finance-web-netcore/myfinance-web-netcore/myfinance-web-netcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hermeslapa/Documentos/git/myfinance-web-netcore/myfinance-web-netcore.csproj",
+        "projectUniqueName": "/home/hermeslapa/Documentos/git/bernardo-dotnet/my-finance-web-netcore/myfinance-web-netcore/myfinance-web-netcore.csproj",
         "projectName": "myfinance-web-netcore",
-        "projectPath": "/home/hermeslapa/Documentos/git/myfinance-web-netcore/myfinance-web-netcore.csproj",
+        "projectPath": "/home/hermeslapa/Documentos/git/bernardo-dotnet/my-finance-web-netcore/myfinance-web-netcore/myfinance-web-netcore.csproj",
         "packagesPath": "/home/hermeslapa/.nuget/packages/",
-        "outputPath": "/home/hermeslapa/Documentos/git/myfinance-web-netcore/obj/",
+        "outputPath": "/home/hermeslapa/Documentos/git/bernardo-dotnet/my-finance-web-netcore/myfinance-web-netcore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hermeslapa/.nuget/NuGet/NuGet.Config"

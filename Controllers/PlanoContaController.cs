@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
+using myfinance_web_netcore.Domain;
 using myfinance_web_netcore.Models;
 
 namespace myfinance_web_netcore.Controllers
@@ -15,8 +15,8 @@ namespace myfinance_web_netcore.Controllers
 
         public IActionResult Index()
         {
-            var planoContasModel = new PlanoContaModel();
-            ViewBag.Lista = planoContasModel.ListaPlanoContas();
+            var planoContas = new PlanoConta();
+            ViewBag.list = planoContas.ListaPlanoContas();
             return View();
         }
 
@@ -24,36 +24,29 @@ namespace myfinance_web_netcore.Controllers
         public IActionResult CriarPlanoConta(int? id)
         {
             if (id != null)
-                {
-                    var planoConta = new PlanoContaModel().CarregarPlanoContaPorId(id);
-                    ViewBag.PlanoConta = planoConta;
-                }
+            {
+                var planoConta = new PlanoConta().CarregarPlanoContaPorId(id);
+                ViewBag.PlanoConta = planoConta;
+            }
+
             return View();
         }
 
         [HttpPost]
         public IActionResult CriarPlanoConta(PlanoContaModel formulario)
         {
-            if(formulario.Id == null)
-                formulario.Inserir();
-            else
-                formulario.Atualizar(formulario.Id);
+            var planoConta = new PlanoConta();
+
+            if (formulario.Id == null) planoConta.Insert(formulario);
+            else planoConta.Atualizar(formulario);
             return RedirectToAction("Index");
         }
-        
+
         [HttpGet]
         public IActionResult ExcluirPlanoConta(int id)
         {
-            new PlanoContaModel().Excluir(id);
+            new PlanoConta().Excluir(id);
             return RedirectToAction("Index");
         }
-
-        [HttpGet]
-        public IActionResult EditarPlanoConta(int id)
-        {
-            new PlanoContaModel().Atualizar(id);
-            return RedirectToAction("Index");
-        }
-
     }
 }

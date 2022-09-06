@@ -26,13 +26,15 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-CriaInstanciaDAL(app);
+CreateDalInstance(app);
+
 app.Run();
 
-void CriaInstanciaDAL(WebApplication app)
+void CreateDalInstance(WebApplication app)
 {
     IConfiguration configuration = app.Configuration;
     DAL.Configuration = configuration;
-    //var objDAL = DAL.GetInstancia;
-    //objDAL.Conectar();    
+    var objDAL = DAL.GetInstance;
+    // objDAL.Connect();
+    // objDAL.ExecuteSqlCommand("INSERT INTO PLANO_CONTAS(DESCRICAO, TIPO) VALUES('Luz', 'D'");
 }

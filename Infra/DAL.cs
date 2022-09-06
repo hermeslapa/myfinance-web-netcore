@@ -1,18 +1,22 @@
 using System.Data.SqlClient;
 using System.Data;
+
 namespace myfinance_web_netcore.Infra
 {
-    public class DAL{
+    public class DAL
+    {
         private SqlConnection conn;
         private string connectionString;
         public static IConfiguration? Configuration;
-        private static DAL? Instancia;
-        
-        public static DAL GetInstancia{
-            get{
-                if (Instancia == null)
-                    Instancia = new();
-                return Instancia;
+        private static DAL? Instance;
+
+        public static DAL GetInstance
+        {
+            get
+            {
+                if (Instance == null)
+                    Instance = new();
+                return Instance;
             }
         }
 
@@ -20,30 +24,33 @@ namespace myfinance_web_netcore.Infra
         {
             connectionString = Configuration.GetValue<string>("ConnectionString");
         }
-        public void Conectar(){
+
+        public void Connect()
+        {
             conn = new();
             conn.ConnectionString = connectionString;
             conn.Open();
         }
 
-        public void Desconectar()
+        public void Disconnect()
         {
             conn.Close();
         }
 
-        public DataTable RetornaDataTable(string sql) 
+        public DataTable ReturnDataTable(string sql)
         {
-            var dataTable= new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(sql,conn);
-            da.Fill(dataTable);
+            var dataTable = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(dataTable);
+
             return dataTable;
         }
 
-        //INSERT,UPDATE,DELETE
-        public void ExecutarComandoSQL(string sql)
+        public void ExecuteSqlCommand(string sql)
         {
-            SqlCommand command = new SqlCommand(sql,conn);
+            SqlCommand command = new SqlCommand(sql, conn);
             command.ExecuteNonQuery();
         }
     }
+
 }
